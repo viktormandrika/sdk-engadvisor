@@ -10,7 +10,7 @@
 
   "autoload": {
     "psr-4": {
-      "engadvisor\\sdk\\models\\": "/src"
+      "engadvisor\\sdk\\models\\": "src/"
     }
   }
 }
