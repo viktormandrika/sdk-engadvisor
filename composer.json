@@ -1,8 +1,12 @@
 {
   "name": "engadvisor/sdk-models",
   "description": "Models engadvisor",
-  "version": "1",
   "minimum-stability": "stable",
+  "require": {
+    "php": ">=5.5.0",
+    "ext-json": "*",
+    "yiisoft/yii2": "~2.0.15"
+  },
 
   "autoload": {
     "psr-4": {
