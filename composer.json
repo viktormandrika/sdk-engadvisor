@@ -1,9 +1,9 @@
 {
-  "name": "SDK Engadvisor",
-  "description": "short description",
+  "name": "SDK Engadvisor models",
+  "description": "Models engadvisor",
   "autoload": {
     "psr-4": {
-      "engadvisor\\": "/src"
+      "engadvisor\\models": "/src"
     }
   },
   "minimum-stability": "dev"
