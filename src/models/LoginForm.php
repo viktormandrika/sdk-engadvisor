@@ -1,5 +1,5 @@
 <?php
-namespace engadvizor\models;
+namespace src\models;
 
 use Yii;
 use yii\base\Model;

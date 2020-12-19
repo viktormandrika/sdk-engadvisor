@@ -1,6 +1,6 @@
 <?php
 
-namespace eengadvizor\models;
+namespace esrc\models;
 
 use Yii;
 
