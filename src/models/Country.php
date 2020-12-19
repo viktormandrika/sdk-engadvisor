@@ -1,6 +1,6 @@
 <?php
 
-namespace esrc\models;
+namespace eengadvisor\sdk\models;
 
 use Yii;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace src\models;
+namespace engadvisor\sdk\models;
 
 use Yii;
 use yii\db\ActiveRecord;

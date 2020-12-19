@@ -6,7 +6,7 @@
 
   "autoload": {
     "psr-4": {
-      "engadvisor\\models": "/src"
+      "engadvisor\\sdk\\models": "/src"
     }
   }
 }
