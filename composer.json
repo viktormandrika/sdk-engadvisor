@@ -1,0 +1,10 @@
+{
+  "name": "SDK Engadvisor",
+  "description": "short description",
+  "autoload": {
+    "psr-4": {
+      "engadvisor\\": "/src"
+    }
+  },
+  "minimum-stability": "dev"
+}
