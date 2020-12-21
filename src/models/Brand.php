@@ -63,10 +63,11 @@ class Brand extends \yii\db\ActiveRecord
         return $this->hasMany(Branch::class, ['id' => 'branch_id'])->viaTable('brand_branch', ['brand_id' => 'id']);
     }
 
-    public function getUser()
+    public function getUsers()
     {
-        return $this->hasOne(User::class, ['id' => 'owner_id']);
+        return $this->hasMany(User::class, ['id' => 'user_id'])->viaTable('user_brand', ['brand_id' => 'id']);
     }
+
 
     public function upload()
     {
