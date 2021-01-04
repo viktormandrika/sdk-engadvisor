@@ -61,4 +61,16 @@ class Service extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Meta::className(), ['id' => 'meta_id']);
     }
+
+    public function getBranches()
+    {
+        return $this->hasMany(Branch::class, ['id' => 'branch_id'])->via('branchService');
+
+    }
+
+    public function getBranchService()
+    {
+        return $this->hasMany(BranchService::class, ['id' => 'service_id']);
+
+    }
 }

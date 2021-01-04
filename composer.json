@@ -1,7 +1,7 @@
 {
   "name": "engadvisor/sdk-models",
   "description": "Models engadvisor",
-  "version": "1.4",
+  "version": "1.4.5",
   "minimum-stability": "stable",
   "require": {
     "php": ">=5.5.0",

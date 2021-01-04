@@ -17,8 +17,8 @@ use yii\db\ActiveRecord;
  * @property Brand $brand
  * @property Meta $meta
  * @property Service[] $services
+ * @property-read BranchService[] $branchServices
  */
-
 class Branch extends ActiveRecord
 {
     /**
@@ -50,8 +50,10 @@ class Branch extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'brand_id' => 'Brand ID',
-            'address_id' => 'Address ID',
+            'brand_id' => 'ID бренда',
+            'address_id' => 'ID адреса',
+            'name' => 'Внутреннее название филлиала',
+            'brand' => 'К какому бренду относится'
         ];
     }
 
@@ -75,9 +77,15 @@ class Branch extends ActiveRecord
         return $this->hasOne(Brand::class, ['id' => 'brand_id']);
     }
 
+    public function getBranchServices()
+    {
+        return $this->hasMany(BranchService::class, ['branch_id' => 'id']);
+
+    }
+
     public function getServices()
     {
-        return $this->hasMany(Service::class, ['id' => 'service_id'])->viaTable('branch_service', ['branch_id' => 'id']);
+        return $this->hasMany(Service::class, ['id' => 'service_id'])->via('branchServices');
     }
 
     public function getMeta()

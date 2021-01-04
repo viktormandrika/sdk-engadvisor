@@ -39,8 +39,8 @@ class Meta extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'description' => 'Description',
+            'title' => 'Мета тайтл',
+            'description' => 'Мета дескрипшн',
         ];
     }
 }

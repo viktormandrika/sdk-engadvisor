@@ -15,6 +15,7 @@ use Yii;
  * @property string|null $slug
  * @property int $city_id
  * @property int|null $metro_id
+ * @property int|null $branch_id
  *
  * @property City $city
  * @property Metro $metro
@@ -44,6 +45,7 @@ class Address extends \yii\db\ActiveRecord
             [['slug'], 'unique'],
             [['city_id'], 'exist', 'skipOnError' => true, 'targetClass' => City::class, 'targetAttribute' => ['city_id' => 'id']],
             [['metro_id'], 'exist', 'skipOnError' => true, 'targetClass' => Metro::class, 'targetAttribute' => ['metro_id' => 'id']],
+            [['branch_id'], 'exist', 'skipOnError' => true, 'targetClass' => Branch::class, 'targetAttribute' => ['branch_id' => 'id']],
         ];
     }
 
@@ -54,13 +56,13 @@ class Address extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'address' => 'Address',
+            'title' => 'Название',
+            'address' => 'Адрес',
             'lon' => 'Lon',
             'lat' => 'Lat',
-            'slug' => 'Slug',
-            'city_id' => 'City ID',
-            'metro_id' => 'Metro ID',
+            'slug' => 'URL',
+            'city_id' => 'Город',
+            'metro_id' => 'Метро',
         ];
     }
 
