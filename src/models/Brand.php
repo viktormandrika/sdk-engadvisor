@@ -14,6 +14,8 @@ use Yii;
  * @property int $owner_id
  * @property string $media_folder
  * @property string $long_description
+ * @property bool $status
+ * @property bool $moderation_status
  *
  * @property Branch[] $branches
  */
@@ -41,6 +43,8 @@ class Brand extends \yii\db\ActiveRecord
             [['owner_id'], 'integer'],
             [['media_folder'], 'string'],
             [['long_description'], 'string'],
+            [['status'], 'boolean'],
+            [['moderation_status'], 'boolean'],
         ];
     }
 
