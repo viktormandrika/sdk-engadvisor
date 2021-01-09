@@ -13,6 +13,7 @@ use Yii;
  * @property string $logo
  * @property int $owner_id
  * @property string $media_folder
+ * @property string $long_description
  *
  * @property Branch[] $branches
  */
@@ -38,7 +39,8 @@ class Brand extends \yii\db\ActiveRecord
             [['name', 'slug', 'logo'], 'string', 'max' => 255],
             ['fileLogo', 'file'],
             [['owner_id'], 'integer'],
-            [['media_folder'], 'string']
+            [['media_folder'], 'string'],
+            [['long_description'], 'string'],
         ];
     }
 
